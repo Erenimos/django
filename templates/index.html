@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Ana Sayfa</h3>
+
+<p>
+    {% if request.user.is_authenticated %}
+        Giriş Yapılmış , {{request.user.username}}
+    
+    {% else %}
+        Giriş Yapılmamış
+    {% endif %}
+</p>
+
+{% endblock body %}
